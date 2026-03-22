@@ -102,11 +102,61 @@
                 专注于极简设计与用户体验的创意工作室
             </p>
             <div class="opacity-0" id="scroll-indicator">
-                <a href="#works" class="inline-block animate-bounce">
+                <a href="#about" class="inline-block animate-bounce">
                     <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作室介绍区域 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-2 text-center opacity-0" id="about-title">工作室介绍</h2>
+            <p class="text-gray-dark text-center mb-12 max-w-2xl mx-auto opacity-0" id="about-subtitle">用简单设计，解决真实需求</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- 理念 -->
+                <div class="bg-gray-light rounded-lg p-8 shadow-md text-center opacity-0" id="about-mission">
+                    <div class="text-4xl mb-4">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">我们的理念</h3>
+                    <p class="text-gray-dark">
+                        秉持极简设计理念，将复杂的功能简化，以最直观的方式呈现给用户。
+                    </p>
+                </div>
+                <!-- 优势 -->
+                <div class="bg-gray-light rounded-lg p-8 shadow-md text-center opacity-0" id="about-advantage">
+                    <div class="text-4xl mb-4">
+                        <i class="fa fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">核心优势</h3>
+                    <p class="text-gray-dark">
+                        专注于免费、高效与便捷体验，持续为用户提供稳定可靠的实用工具。
+                    </p>
+                </div>
+                <!-- 成果 -->
+                <div class="bg-gray-light rounded-lg p-8 shadow-md text-center opacity-0" id="about-achievement">
+                    <div class="text-4xl mb-4">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">已出成果</h3>
+                    <p class="text-gray-dark">
+                        Qian影视、Qian云盘，及多款小工具，覆盖用户日常娱乐与工作需求。
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-gray-light rounded-lg p-8 shadow-md opacity-0" id="about-content">
+                <blockquote class="border-l-4 border-primary pl-4 italic mb-6 text-gray-dark">
+                    "只有自己成为用户，才能更好地服务用户。"
+                </blockquote>
+                <p class="text-lg leading-relaxed text-gray-dark">
+                    白小谦工作室专注于简洁、实用、轻量化的互联网产品开发。我们深信，优秀的产品应当是无形的，让用户无需学习即可上手。我们的团队由一群热爱创造、追求极致的年轻人组成，我们不断探索新的技术和方法，只为给用户带来更好的体验。
+                </p>
             </div>
         </div>
     </section>
@@ -156,6 +206,24 @@
                 <!-- 作品卡片 3 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-3">
                     <div class="relative overflow-hidden">
+                        <img src="https://58mssvm2xj.coze.site/api/share/file/3ab55d97-a029-4c23-92c8-2d8db2830453/download" 
+                             alt="RAZ-Plus 书籍破解器" 
+                             class="w-full h-56 object-cover lazy-image"
+                             loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">RAZ-Plus 书籍破解器</h3>
+                        <p class="text-gray-dark mb-4">RAZ-Plus是很好的分级阅读，但是获取图书需要很复杂的渠道，于是我制作了RAZ-Plus 书籍破解器（仅可用于教育目的）</p>
+                        <a href="#" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block text-primary hover:text-secondary transition-colors duration-300">
+                            查看项目 <i class="fa fa-external-link ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 作品卡片 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-4">
+                    <div class="relative overflow-hidden">
                         <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/cf9f7445aa104e368b62fed46a307839~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260322083305781BFA653CC595A13F82&rrcfp=f06b921b&x-expires=1776731637&x-signature=aOZDDgqSq6lLClW7QZR0PbaMS5s%3D" 
                              alt="更多项目" 
                              class="w-full h-56 object-cover lazy-image"
@@ -179,7 +247,7 @@
         <div class="container mx-auto max-w-6xl px-4 text-center">
             <p class="mb-4 opacity-0" id="footer-text">© <span id="current-year">2026</span> 白小谦工作室. 保留所有权利.</p>
             <p class="text-sm text-gray-medium opacity-1" id="footer-copyright">
-                只有自己成为用户，才能更好的服务用户。——白小谦（白小谦工作室创始人）
+                只有自己成为用户，才能更好地服务用户。——白小谦（白小谦工作室创始人）
             </p>
         </div>
     </footer>
@@ -208,9 +276,26 @@
                 .to('#scroll-indicator', {opacity: 1, y: -20, duration: 1, delay: 0.3}, "-=0.5");
         }
         
+        // 工作室介绍区域动画
+        function animateAbout() {
+            gsap.utils.toArray(['#about-title', '#about-subtitle', '#about-mission', '#about-advantage', '#about-achievement', '#about-content']).forEach((element, i) => {
+                gsap.to(element, {
+                    opacity: 1,
+                    y: -20,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    delay: i * 0.15
+                });
+            });
+        }
+        
         // 作品区域动画
         function animateWorks() {
-            gsap.utils.toArray(['#works-title', '#work-card-1', '#work-card-2', '#work-card-3']).forEach((element, i) => {
+            gsap.utils.toArray(['#works-title', '#work-card-1', '#work-card-2', '#work-card-3', '#work-card-4']).forEach((element, i) => {
                 gsap.to(element, {
                     opacity: 1,
                     y: -20,
@@ -302,6 +387,7 @@
         // 初始化所有功能
         function init() {
             animateHero();
+            animateAbout();
             animateWorks();
             animateFooter();
             setupLazyLoading();
