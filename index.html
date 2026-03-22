@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白小谦工作室</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- GSAP 动画库 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#000000',
+                        secondary: '#333333',
+                        light: '#FFFFFF',
+                        gray: {
+                            light: '#F5F5F5',
+                            medium: '#E0E0E0',
+                            dark: '#666666'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    transitionProperty: {
+                        'height': 'height',
+                        'spacing': 'margin, padding'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-lg;
+            }
+            .image-lazy {
+                @apply opacity-0 transition-opacity duration-500;
+            }
+            .image-loaded {
+                @apply opacity-100;
+            }
+        }
+    </style>
+    
+    <style>
+        /* 自定义滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* 图片懒加载淡入效果 */
+        .lazy-image {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .lazy-image.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-light font-sans text-primary">
+    <!-- Hero 区域 -->
+    <section id="hero" class="min-h-screen flex flex-col items-center justify-center px-4 py-20">
+        <div class="container mx-auto max-w-5xl text-center">
+            <div class="mb-4 opacity-0" id="logo-container">
+                <!-- 移除logo -->
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 opacity-0" id="title">白小谦工作室</h1>
+            <p class="text-xl md:text-2xl text-gray-dark max-w-2xl mx-auto mb-12 opacity-0" id="subtitle">
+                专注于极简设计与用户体验的创意工作室
+            </p>
+            <div class="opacity-0" id="scroll-indicator">
+                <a href="#works" class="inline-block animate-bounce">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示区域 -->
+    <section id="works" class="py-20 bg-gray-light">
+        <div class="container mx-auto max-w-6xl px-4">
+            <h2 class="text-3xl md:text-4xl font-bold mb-16 text-center opacity-0" id="works-title">精选项目</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 作品卡片 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-1">
+                    <div class="relative overflow-hidden">
+                        <img src="https://coze-coding-project.tos.coze.site/coze_storage_7599248176461185039/uploads/7991fd04-861f-4c12-9138-fbba0a3e1ee4/c9f829f2-4be4-45e2-a8bb-76a02fa8cb62/Ping_Mu_Jie_Tu_2026-03-22_085129_101f90d5.png?sign=1774144346-b736802ebd-0-7135cdccdba4e94dff45c77ffda2f23219bf03f95dbae87f75e3f3db99219385" 
+                             alt="Qian影视" 
+                             class="w-full h-56 object-cover lazy-image"
+                             loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Qian影视</h3>
+                        <p class="text-gray-dark mb-4">基于腾讯视频制作的，免费、简洁观影网站</p>
+                        <a href="https://s.jiaojuku.com/p/ufhy4r" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block text-primary hover:text-secondary transition-colors duration-300">
+                            查看项目 <i class="fa fa-external-link ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 作品卡片 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-2">
+                    <div class="relative overflow-hidden">
+                        <img src="https://coze-coding-project.tos.coze.site/coze_storage_7599248176461185039/uploads/7991fd04-861f-4c12-9138-fbba0a3e1ee4/177ab60c-7ba0-46e2-b131-33fdd23db73e/Ping_Mu_Jie_Tu_2026-03-22_085320_07650cf5.png?sign=1774144433-970500d537-0-af2b53742f576f4cdf9023a57d5a53c4254de3e3e94ca7d0491f625cde09daad" 
+                             alt="Qian云盘" 
+                             class="w-full h-56 object-cover lazy-image"
+                             loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Qian云盘</h3>
+                        <p class="text-gray-dark mb-4">基于火山云制作的，免费、无限空间云盘</p>
+                        <a href="https://58mssvm2xj.coze.site/" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block text-primary hover:text-secondary transition-colors duration-300">
+                            查看项目 <i class="fa fa-external-link ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 作品卡片 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-3">
+                    <div class="relative overflow-hidden">
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/cf9f7445aa104e368b62fed46a307839~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260322083305781BFA653CC595A13F82&rrcfp=f06b921b&x-expires=1776731637&x-signature=aOZDDgqSq6lLClW7QZR0PbaMS5s%3D" 
+                             alt="更多项目" 
+                             class="w-full h-56 object-cover lazy-image"
+                             loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">项目投稿</h3>
+                        <p class="text-gray-dark mb-4">欢迎投稿您的创意项目</p>
+                        <a href="https://v.wjx.cn/vm/QiQhbHV.aspx#" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block text-primary hover:text-secondary transition-colors duration-300">
+                            投稿项目 <i class="fa fa-external-link ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-light py-12">
+        <div class="container mx-auto max-w-6xl px-4 text-center">
+            <p class="mb-4 opacity-0" id="footer-text">© <span id="current-year">2026</span> 白小谦工作室. 保留所有权利.</p>
+            <p class="text-sm text-gray-medium opacity-1" id="footer-copyright">
+                只有自己成为用户，才能更好的服务用户。——白小谦（白小谦工作室创始人）
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // 初始化 GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // 设置当前年份 - 确保年份自动更新
+        function updateCurrentYear() {
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = currentYear;
+            }
+        }
+        
+        // 页面加载时更新年份
+        updateCurrentYear();
+        
+        // Hero 区域动画
+        function animateHero() {
+            gsap.timeline()
+                .to('#title', {opacity: 1, y: -20, duration: 1, delay: 0.2})
+                .to('#subtitle', {opacity: 1, y: -20, duration: 1, delay: 0.3}, "-=0.5")
+                .to('#scroll-indicator', {opacity: 1, y: -20, duration: 1, delay: 0.3}, "-=0.5");
+        }
+        
+        // 作品区域动画
+        function animateWorks() {
+            gsap.utils.toArray(['#works-title', '#work-card-1', '#work-card-2', '#work-card-3']).forEach((element, i) => {
+                gsap.to(element, {
+                    opacity: 1,
+                    y: -20,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    delay: i * 0.2
+                });
+            });
+        }
+        
+        // 页脚动画 - 确保文字显示
+        function animateFooter() {
+            // 直接设置透明度为1确保文字显示
+            document.getElementById('footer-text').style.opacity = '1';
+            document.getElementById('footer-copyright').style.opacity = '1';
+            
+            // 同时保留动画效果
+            gsap.utils.toArray(['#footer-text', '#footer-copyright']).forEach((element, i) => {
+                gsap.to(element, {
+                    opacity: 1,
+                    y: -20,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: "top 80%",
+                        toggleActions: "play none none none"
+                    },
+                    delay: i * 0.2
+                });
+            });
+        }
+        
+        // 图片懒加载 - 简化版本确保图片显示
+        function setupLazyLoading() {
+            const lazyImages = document.querySelectorAll('.lazy-image');
+            
+            // 直接添加loaded类确保图片显示
+            lazyImages.forEach(img => {
+                img.classList.add('loaded');
+                
+                // 图片加载错误处理
+                img.onerror = function() {
+                    console.error('图片加载失败:', this.src);
+                    this.src = 'data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa21%20text%20%7B%20fill%3A%23999%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa21%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285%22%20y%3D%22218%22%3E图片加载失败%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E';
+                };
+            });
+        }
+        
+        // 平滑滚动到作品区域
+        function setupSmoothScroll() {
+            const scrollLinks = document.querySelectorAll('a[href^="#"]');
+            
+            scrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // 作品卡片悬停效果
+        function setupCardHoverEffects() {
+            const cards = document.querySelectorAll('.card-hover');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    gsap.to(this, {scale: 1.03, boxShadow: '0 10px 25px rgba(0,0,0,0.1)', duration: 0.3});
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    gsap.to(this, {scale: 1, boxShadow: '0 4px 6px rgba(0,0,0,0.1)', duration: 0.3});
+                });
+            });
+        }
+        
+        // 初始化所有功能
+        function init() {
+            animateHero();
+            animateWorks();
+            animateFooter();
+            setupLazyLoading();
+            setupSmoothScroll();
+            setupCardHoverEffects();
+        }
+        
+        // 页面加载完成后初始化
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
