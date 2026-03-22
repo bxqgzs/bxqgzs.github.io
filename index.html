@@ -206,6 +206,24 @@
                 <!-- 作品卡片 3 -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-3">
                     <div class="relative overflow-hidden">
+                        <img src="https://58mssvm2xj.coze.site/api/share/file/fe727174-6115-4d98-a664-fb9c8f3fbc21/download" 
+                             alt="Qian音乐" 
+                             class="w-full h-56 object-cover lazy-image"
+                             loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Qian音乐</h3>
+                        <p class="text-gray-dark mb-4">基于网易云音乐制作的，免费、简洁听歌网站，只要有浏览器，有网就能听。</p>
+                        <a href="https://s.jiaojuku.com/p/osrszk" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block text-primary hover:text-secondary transition-colors duration-300">
+                            查看项目 <i class="fa fa-external-link ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 作品卡片 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-5">
+                    <div class="relative overflow-hidden">
                         <img src="https://58mssvm2xj.coze.site/api/share/file/3ab55d97-a029-4c23-92c8-2d8db2830453/download" 
                              alt="RAZ-Plus 书籍破解器" 
                              class="w-full h-56 object-cover lazy-image"
@@ -221,8 +239,8 @@
                     </div>
                 </div>
                 
-                <!-- 作品卡片 4 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-4">
+                <!-- 作品卡片 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md card-hover opacity-0" id="work-card-5">
                     <div class="relative overflow-hidden">
                         <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/super_tool/cf9f7445aa104e368b62fed46a307839~tplv-a9rns2rl98-image.image?lk3s=8e244e95&rcl=20260322083305781BFA653CC595A13F82&rrcfp=f06b921b&x-expires=1776731637&x-signature=aOZDDgqSq6lLClW7QZR0PbaMS5s%3D" 
                              alt="更多项目" 
@@ -295,7 +313,7 @@
         
         // 作品区域动画
         function animateWorks() {
-            gsap.utils.toArray(['#works-title', '#work-card-1', '#work-card-2', '#work-card-3', '#work-card-4']).forEach((element, i) => {
+            gsap.utils.toArray(['#works-title', '#work-card-1', '#work-card-2', '#work-card-3', '#work-card-4', '#work-card-5']).forEach((element, i) => {
                 gsap.to(element, {
                     opacity: 1,
                     y: -20,
