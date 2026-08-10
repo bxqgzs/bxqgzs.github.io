@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- ===== 基础 SEO ===== -->
+    <title>多项人格测试 - 白小谦工作室</title>
+    <meta name="description" content="白小谦工作室出品的免费、权威、多项人格测试合集，包含 SBTI、SCL90、心理年龄测试、腹黑鉴定、PUA抵抗力、历史上的自己、职业倾向、欲望图谱、隐藏欲望、隐藏天赋、适合城市鉴定、情绪测评、七宗罪测评、疯子人格雷达、第二个我等 15 项测试，基于多项权威数据，纯娱乐免费。">
+    <meta name="keywords" content="多项人格测试,SBTI,SCL90,心理健康测评,心理年龄测试,腹黑鉴定,PUA抵抗力,历史上的自己,职业倾向,欲望图谱,隐藏欲望,隐藏天赋,适合城市鉴定,情绪测评,七宗罪测评,疯子人格雷达,第二个我,免费人格测试,白小谦工作室">
+    <meta name="author" content="白小谦工作室">
+    <meta name="theme-color" content="#fbfbfd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://qians.netlify.app/personality.html">
+
+    <!-- ===== Open Graph / Twitter ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="白小谦工作室">
+    <meta property="og:title" content="多项人格测试 - 白小谦工作室">
+    <meta property="og:description" content="免费、权威、多项人格测试合集，基于多项权威数据，纯娱乐免费。">
+    <meta property="og:url" content="https://qians.netlify.app/personality.html">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:image" content="https://qians.netlify.app/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="多项人格测试 - 白小谦工作室">
+    <meta name="twitter:description" content="免费、权威、多项人格测试合集，基于多项权威数据，纯娱乐免费。">
+    <meta name="twitter:image" content="https://qians.netlify.app/og-image.png">
+
+    <!-- ===== 图标 ===== -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- ===== 预连接 CDN ===== -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- ===== Tailwind CSS (CDN JIT) ===== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1d1d1f', sub: '#6e6e73', canvas: '#fbfbfd', surface: '#ffffff',
+                        hairline: '#d2d2d7', accent: '#0071e3', accentHover: '#0077ED', footerBg: '#1d1d1f'
+                    },
+                    fontFamily: { sans: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"PingFang SC"', '"Helvetica Neue"', '"Microsoft YaHei"', 'Inter', 'system-ui', 'sans-serif'] },
+                    borderRadius: { 'card': '18px', 'pill': '980px' },
+                    maxWidth: { 'apple': '1120px' }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance { text-wrap: balance; }
+            .reveal { opacity: 0; transform: translateY(40px); }
+            .nav-blur { backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px); }
+        }
+    </style>
+    <style>
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f5f5f7; }
+        ::-webkit-scrollbar-thumb { background: #c7c7cc; border-radius: 8px; border: 2px solid #f5f5f7; }
+        ::-webkit-scrollbar-thumb:hover { background: #8e8e93; }
+        a:focus-visible, button:focus-visible { outline: 2px solid #0071e3; outline-offset: 3px; border-radius: 4px; }
+        .dot { width: 8px; height: 8px; border-radius: 9999px; display: inline-block; }
+        .no-js .reveal { opacity: 1 !important; transform: none !important; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+            .animate-bounce { animation: none !important; }
+        }
+
+        /* 测试卡片搜索隐藏 */
+        #tests article.is-hidden { display: none !important; }
+    </style>
+
+    <!-- ===== JSON-LD ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "首页", "item": "https://qians.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "多项人格测试", "item": "https://qians.netlify.app/personality.html" }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-canvas text-ink font-sans antialiased">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:bg-ink focus:text-white focus:px-4 focus:py-2 focus:rounded-pill">跳到主要内容</a>
+
+    <!-- ===== 顶部导航栏 ===== -->
+    <header id="nav" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
+        <nav class="nav-blur bg-white/70 border-b border-transparent transition-all duration-300" aria-label="主导航">
+            <div class="max-w-apple mx-auto px-6 h-12 flex items-center justify-between text-sm">
+                <a href="index.html" class="flex items-center gap-2">
+                    <img src="logo.png" alt="白小谦工作室" class="h-7 w-auto">
+                    <span class="font-semibold tracking-tight text-ink">白小谦工作室</span>
+                </a>
+                <ul class="hidden md:flex items-center gap-8 text-sub">
+                    <li><a href="index.html#about" class="hover:text-ink transition-colors">关于</a></li>
+                    <li><a href="index.html#works" class="hover:text-ink transition-colors">作品</a></li>
+                    <li><a href="index.html#contact" class="hover:text-ink transition-colors">联系</a></li>
+                </ul>
+                <a href="index.html" class="md:hidden text-sub hover:text-ink" aria-label="返回首页"><i class="fa fa-home"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <!-- ===== Hero 区域 ===== -->
+        <section class="pt-32 md:pt-40 pb-16 md:pb-20 px-6 text-center">
+            <div class="max-w-apple mx-auto">
+                <p class="reveal text-accent font-semibold tracking-wide mb-5 text-base md:text-lg">白小谦工作室</p>
+                <h1 class="reveal text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.08] mb-6 text-balance">
+                    多项人格测试
+                </h1>
+                <p class="reveal text-lg md:text-xl text-sub max-w-2xl mx-auto mb-4 leading-relaxed text-balance">
+                    刷视频的时候老发现有各种人格测试，但是一看，花钱还不权威，于是我开发了几款娱乐测试网站。
+                </p>
+                <p class="reveal text-base md:text-lg text-sub max-w-2xl mx-auto leading-relaxed text-balance">
+                    基于多项权威数据，还免费，希望可以帮助你们。
+                </p>
+                <a href="#tests" class="reveal mt-10 inline-flex items-center gap-2 bg-accent hover:bg-accentHover text-white text-base font-medium px-6 py-3 rounded-pill transition-colors">
+                    选择测试 <i class="fa fa-arrow-down text-sm"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== 测试列表 ===== -->
+        <section id="tests" class="py-20 md:py-28 bg-surface">
+            <div class="max-w-apple mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center mb-14 md:mb-16">
+                    <h2 class="reveal text-3xl md:text-5xl font-semibold tracking-tight mb-4 text-balance">选择一项测试</h2>
+                    <p class="reveal text-lg md:text-xl text-sub text-balance">点击卡片即可开始测试，全部免费。</p>
+                </div>
+
+                <!-- 免责声明 -->
+                <p class="reveal mb-10 md:mb-12 text-center text-sm text-sub/80 max-w-2xl mx-auto leading-relaxed">
+                    <i class="fa fa-info-circle mr-1"></i>
+                    以下测试仅供娱乐参考，不构成专业心理诊断。如需专业帮助，请咨询持证心理咨询师。
+                </p>
+
+                <!-- 搜索框 -->
+                <div class="reveal max-w-xl mx-auto mb-12 md:mb-14">
+                    <div class="relative">
+                        <i class="fa fa-search absolute left-5 top-1/2 -translate-y-1/2 text-sub/60"></i>
+                        <input id="test-search-input" type="search" placeholder="搜索测试名称…" autocomplete="off"
+                            class="w-full pl-12 pr-10 py-3.5 text-base bg-surface rounded-pill border border-hairline/60 focus:border-accent focus:outline-none transition-colors placeholder:text-sub/50">
+                        <button id="test-search-clear" type="button" aria-label="清空搜索" class="hidden absolute right-4 top-1/2 -translate-y-1/2 text-sub/60 hover:text-ink">
+                            <i class="fa fa-times-circle"></i>
+                        </button>
+                    </div>
+                    <p id="test-search-empty" class="hidden mt-4 text-center text-sub text-sm">没有找到匹配「<span id="test-search-empty-kw"></span>」的测试。</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+                    <!-- SBTI -->
+                    <article id="test-1" data-name="SBTI 人格测试" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="sbti.png" alt="SBTI 人格测试" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">人格</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">SBTI 人格测试</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">SBTI 是一种流行的人格测试模型，帮助你快速了解自己的人格类型与特质。</p>
+                            <a href="https://s.jiaojuku.com/p/4gyr4b" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- SCL90 -->
+                    <article id="test-2" data-name="SCL90 心理健康测评" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="scl90.png" alt="SCL90 心理健康测评" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">心理健康</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">SCL90 心理健康测评</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">症状自评量表 SCL-90，从多个维度评估心理健康状态，经典且权威。</p>
+                            <a href="https://s.jiaojuku.com/p/a9h863" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 心理年龄测试 -->
+                    <article id="test-3" data-name="心理年龄测试" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psyage.png" alt="心理年龄测试" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">趣味</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">心理年龄测试</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">测一测你的心理年龄到底是多少岁，也许和你的实际年龄大不相同。</p>
+                            <a href="https://s.jiaojuku.com/p/7xj4nc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 腹黑鉴定 -->
+                    <article id="test-4" data-name="腹黑鉴定" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="fuhei.png" alt="腹黑鉴定" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">趣味</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">腹黑鉴定</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">鉴一鉴你的腹黑指数，看看你内心是否住着一个"小恶魔"。</p>
+                            <a href="https://s.jiaojuku.com/p/fhqve8" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PUA抵抗力 -->
+                    <article id="test-5" data-name="PUA抵抗力" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_pua.png" alt="PUA抵抗力" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">心理防御</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">PUA抵抗力</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">测试你对 PUA 话术的识别与抵抗能力，了解自己在情感操控面前的防线。</p>
+                            <a href="https://s.jiaojuku.com/p/xcoc4y" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 历史上的自己 -->
+                    <article id="test-6" data-name="历史上的自己" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_history.png" alt="历史上的自己" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">趣味</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">历史上的自己</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">如果你生活在历史中，你会是哪个时代、哪种身份的人？穿越一把看看。</p>
+                            <a href="https://s.jiaojuku.com/p/bwap3u" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 职业倾向 -->
+                    <article id="test-7" data-name="职业倾向" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_career.png" alt="职业倾向" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">职业</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">职业倾向</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">基于性格与兴趣，分析你更适合的职业方向，为发展提供参考。</p>
+                            <a href="https://s.jiaojuku.com/p/gi7xc2" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 欲望图谱 -->
+                    <article id="test-8" data-name="欲望图谱" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_desire.png" alt="欲望图谱" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">深度</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">欲望图谱</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">绘制你内心的欲望分布图，看清驱动你前行的底层动机。</p>
+                            <a href="https://s.jiaojuku.com/p/nyj5cw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 隐藏欲望 -->
+                    <article id="test-9" data-name="隐藏欲望" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_hidden_desire.png" alt="隐藏欲望" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">深度</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">隐藏欲望</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">挖掘你潜意识中被压抑的欲望，直面内心深处真实的声音。</p>
+                            <a href="https://s.jiaojuku.com/p/bywb17" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 隐藏天赋 -->
+                    <article id="test-10" data-name="隐藏天赋" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_talent.png" alt="隐藏天赋" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">潜能</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">隐藏天赋</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">发现你尚未察觉的潜在天赋，也许你就是某个领域的隐藏高手。</p>
+                            <a href="https://s.jiaojuku.com/p/c5uk27" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 适合城市鉴定 -->
+                    <article id="test-11" data-name="适合城市鉴定" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_city.png" alt="适合城市鉴定" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">生活</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">适合城市鉴定</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">根据你的性格与生活方式，鉴定最适合你居住的城市。</p>
+                            <a href="https://s.jiaojuku.com/p/6lxw3z" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 情绪测评 -->
+                    <article id="test-12" data-name="情绪测评" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_emotion.png" alt="情绪测评" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">心理健康</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">情绪测评</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">评估你近期的情绪状态，帮助你更好地觉察与调节情绪。</p>
+                            <a href="https://s.jiaojuku.com/p/fxf3c4" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 七宗罪测评 -->
+                    <article id="test-13" data-name="七宗罪测评" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_sins.png" alt="七宗罪测评" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">趣味</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">七宗罪测评</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">基于七宗罪设定，测评你最易陷入的人性弱点，娱乐中带点反思。</p>
+                            <a href="https://s.jiaojuku.com/p/9bn74y" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 疯子人格雷达 -->
+                    <article id="test-14" data-name="疯子人格雷达" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_mad.png" alt="疯子人格雷达" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">趣味</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">疯子人格雷达</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">用雷达图呈现你"疯"的各个维度，看看你离天才疯子有多远。</p>
+                            <a href="https://s.jiaojuku.com/p/sl8jdz" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- 第二个我 -->
+                    <article id="test-15" data-name="第二个我" class="reveal group bg-canvas rounded-card overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)]">
+                        <div class="overflow-hidden bg-canvas">
+                            <img src="psy_altself.png" alt="第二个我" class="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">
+                        </div>
+                        <div class="p-5">
+                            <div class="flex items-center gap-2 mb-2 text-xs text-sub">
+                                <span class="dot bg-green-500"></span><span>已上线</span>
+                                <span class="ml-1 px-2 py-0.5 rounded-full bg-accent/10 text-accent">人格</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">第二个我</h3>
+                            <p class="text-sub text-sm leading-relaxed mb-4">发掘你性格中另一个隐秘的自我，也许你并不只是一种人。</p>
+                            <a href="https://s.jiaojuku.com/p/1aighu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-accent hover:underline text-sm font-medium">
+                                开始测试 <i class="fa fa-external-link text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="bg-footerBg text-white py-12">
+        <div class="max-w-apple mx-auto px-6 text-center">
+            <a href="index.html" class="inline-flex items-center gap-2 mb-4 text-white/80 hover:text-white transition-colors">
+                <i class="fa fa-arrow-left text-sm"></i> 返回首页
+            </a>
+            <p class="text-white/50 text-sm">© <span id="current-year">2026</span> 白小谦工作室. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <noscript>
+        <style>.reveal { opacity: 1 !important; transform: none !important; }</style>
+    </noscript>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+
+        (function updateYear() {
+            var y = new Date().getFullYear();
+            var el = document.getElementById('current-year');
+            if (el) el.textContent = y;
+        })();
+
+        var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var hasGSAP = typeof gsap !== 'undefined';
+        if (hasGSAP && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+
+        function revealAll() {
+            document.querySelectorAll('.reveal').forEach(function (el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
+
+        if (reduceMotion || !hasGSAP) {
+            revealAll();
+        } else {
+            // Hero 渐次淡入
+            gsap.to('section:first-of-type .reveal', {
+                opacity: 1, y: 0, duration: 0.9, stagger: 0.12, ease: 'power3.out', delay: 0.15
+            });
+            // 滚动触发
+            gsap.utils.toArray('.reveal').forEach(function (el) {
+                if (el.closest('section:first-of-type')) return;
+                gsap.to(el, {
+                    opacity: 1, y: 0, duration: 0.8, ease: 'power3.out',
+                    scrollTrigger: { trigger: el, start: 'top 85%', toggleActions: 'play none none none' }
+                });
+            });
+        }
+
+        // 导航栏滚动样式
+        var nav = document.getElementById('nav');
+        var navInner = nav.querySelector('nav');
+        function onScroll() {
+            if (window.scrollY > 10) {
+                navInner.classList.add('bg-white/80', 'border-hairline', 'shadow-sm');
+                navInner.classList.remove('bg-white/70');
+            } else {
+                navInner.classList.remove('bg-white/80', 'border-hairline', 'shadow-sm');
+                navInner.classList.add('bg-white/70');
+            }
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // 平滑滚动锚点
+        document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var id = this.getAttribute('href');
+                if (id === '#' || id.length < 2) return;
+                var target = document.querySelector(id);
+                if (target) {
+                    e.preventDefault();
+                    window.scrollTo({ top: target.offsetTop - 40, behavior: reduceMotion ? 'auto' : 'smooth' });
+                }
+            });
+        });
+
+        // 图片加载失败占位
+        document.querySelectorAll('img').forEach(function (img) {
+            img.addEventListener('error', function () {
+                this.style.background = '#f5f5f7';
+                this.alt = '图片加载失败';
+            });
+        });
+
+        // ===== 测试搜索 =====
+        var testSearchInput = document.getElementById('test-search-input');
+        var testSearchClear = document.getElementById('test-search-clear');
+        var testSearchEmpty = document.getElementById('test-search-empty');
+        var testSearchEmptyKw = document.getElementById('test-search-empty-kw');
+        var testCards = document.querySelectorAll('#tests article[data-name]');
+
+        function applyTestSearch() {
+            var kw = (testSearchInput.value || '').trim().toLowerCase();
+            var visibleCount = 0;
+            testCards.forEach(function (card) {
+                var name = (card.getAttribute('data-name') || '').toLowerCase();
+                var show = (kw === '') || name.indexOf(kw) !== -1;
+                card.classList.toggle('is-hidden', !show);
+                if (show) visibleCount++;
+            });
+            if (visibleCount === 0) {
+                testSearchEmptyKw.textContent = kw;
+                testSearchEmpty.classList.remove('hidden');
+            } else {
+                testSearchEmpty.classList.add('hidden');
+            }
+            if (typeof ScrollTrigger !== 'undefined') {
+                ScrollTrigger.refresh();
+            }
+        }
+
+        testSearchInput.addEventListener('input', function () {
+            testSearchClear.classList.toggle('hidden', this.value === '');
+            applyTestSearch();
+        });
+        testSearchInput.addEventListener('search', function () {
+            testSearchClear.classList.toggle('hidden', this.value === '');
+            applyTestSearch();
+        });
+        testSearchClear.addEventListener('click', function () {
+            testSearchInput.value = '';
+            testSearchClear.classList.add('hidden');
+            applyTestSearch();
+            testSearchInput.focus();
+        });
+    </script>
+    <noscript>
+        <style>
+            #test-search-input, #test-search-clear { display: none !important; }
+        </style>
+    </noscript>
+</body>
+</html>

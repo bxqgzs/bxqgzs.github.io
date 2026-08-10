@@ -1,0 +1,10 @@
+/* TEAM */
+创始人: 白小谦
+工作室: 白小谦工作室
+标语: 只有自己成为用户，才能更好地服务用户。
+
+/* SITE */
+名称: 白小谦工作室
+域名: https://qians.netlify.app
+语言: zh-CN
+技术: HTML5, Tailwind CSS, GSAP

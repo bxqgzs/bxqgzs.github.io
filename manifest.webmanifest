@@ -1,0 +1,24 @@
+{
+  "name": "白小谦工作室",
+  "short_name": "白小谦",
+  "description": "专注于极简设计与用户体验的创意工作室，出品多款免费、简洁、实用的互联网工具。",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbfd",
+  "theme_color": "#fbfbfd",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "592x618",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
